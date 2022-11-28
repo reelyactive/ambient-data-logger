@@ -1,0 +1,46 @@
+{
+  "name": "ambient-data-logger",
+  "homepage": "https://www.reelyactive.com",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "Collect and process wireless ambient data packets, writing specific properties to log files.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "ambient data",
+    "data logger"
+  ],
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/ambientdatalogger.js",
+  "scripts": {
+    "start": "node bin/ambient-data-logger"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/ambientdatalogger.git"
+  },
+  "dependencies": {
+    "advlib": "^1.1.5",
+    "advlib-ble": "^1.3.1",
+    "advlib-ble-manufacturers": "^1.4.1",
+    "advlib-ble-services": "^1.3.4",
+    "advlib-interoperable": "^1.2.0",
+    "barnacles": "^1.5.2",
+    "barnacles-logfile": "^1.2.0",
+    "barnowl": "^1.2.3",
+    "raddec": "^0.4.3"
+  },
+  "bugs": {
+    "url": "https://github.com/reelyactive/ambientdatalogger/issues"
+  },
+  "contributors": [
+    {
+      "name": "Jeffrey Dungen"
+    }
+  ],
+  "license": "MIT"
+}
