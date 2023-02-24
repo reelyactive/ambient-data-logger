@@ -2,6 +2,6 @@
 
 const AmbientDataLogger = require('../lib/ambientdatalogger.js');
 
-const OPTIONS = {};
+const OPTIONS = { isDebug: true };
 
 let service = new AmbientDataLogger(OPTIONS);
