@@ -19,7 +19,11 @@
   "main": "./lib/ambientdatalogger.js",
   "scripts": {
     "start": "node bin/ambient-data-logger",
-    "verbose": "node bin/ambient-data-logger-verbose"
+    "verbose": "node bin/ambient-data-logger-verbose",
+    "minew": "node bin/ambient-data-logger-minew",
+    "minew-verbose": "node bin/ambient-data-logger-minew-verbose",
+    "aruba": "node bin/ambient-data-logger-aruba",
+    "aruba-verbose": "node bin/ambient-data-logger-aruba-verbose"
   },
   "repository": {
     "type": "git",

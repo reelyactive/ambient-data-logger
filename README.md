@@ -4,28 +4,44 @@ Ambient Data Logger
 Collect and process wireless ambient data packets, writing specific properties to log files.
 
 
-Installation
-------------
+Quick Start
+-----------
 
-Clone this repository and then install the package dependencies with the following command:
+Clone this repository, install package dependencies with `npm install`,  and then from the root folder run at any time:
 
-    npm install
+    npm start
+
+__ambient-data-logger__ will indiscriminately accept UDP __raddec__ packets on 0.0.0.0:50001 and write comma-separated values (CSV) data to logs/dynamb-YYMMDD-HHMMSS.csv and logs/raddec-YYMMDD-HHMMSS.csv.
+
+See the [reelyActive Developers Cheatsheet](https://reelyactive.github.io/diy/cheatsheet/) to learn more about the __raddec__ and __dynamb__ data structures.
+
+
+Supported Listener Interfaces
+-----------------------------
+
+__ambient-data-tds__ can interface with wireless infrastructure via any of the __barnowl-x__ modules, which can be installed on-demand, as indicated below.
+
+### barnowl-aruba
+
+To receive data from Aruba APs, install the [barnowl-aruba](https://github.com/reelyactive/barnowl-aruba) module with the command `npm install barnowl-aruba`, and then from the root folder run at any time:
+
+    npm run aruba
+
+For debugging, instead run the script `npm run aruba-verbose`.
+
+### barnowl-minew
+
+To receive data from Minew gateways, install the [barnowl-minew](https://github.com/reelyactive/barnowl-minew) module with the command `npm install barnowl-minew`, and then from the root folder run at any time:
+
+    npm run minew
+
+For debugging, instead run the script `npm run minew-verbose`.
 
 
 Configuration
 -------------
 
-Edit the file config.js as required for the data collection.
-
-
-Logging Ambient Data
---------------------
-
-Start logging with the following command:
-
-    npm start
-
-and observe comma-separated values (CSV) data written to logs/dynamb-YYMMDD-HHMMSS.csv and logs/raddec-YYMMDD-HHMMSS.csv (or in the folders specified in config.js).
+Edit the files in the /config folder as required for the data collection.
 
 
 Contributing

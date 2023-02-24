@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const AmbientDataLogger = require('../lib/ambientdatalogger.js');
+
+// ----- Exit gracefully if the optional dependency is not found -----
+let BarnowlAruba;
+try {
+  BarnowlMinew = require('barnowl-minew');
+}
+catch(err) {
+  console.log('This script requires the barnowl-minew package.  Try installing with:');
+  console.log('\r\n    "npm install barnowl-minew"\r\n');
+  return console.log('and then run this script again.');
+}
+// -------------------------------------------------------------------
+
+const OPTIONS = { isDebug: true };
+
+
+let service = new AmbientDataLogger(OPTIONS);
+
+let barnowl = new BarnowlMinew();
+
+barnowl.addListener(BarnowlMinew.HttpListener, {});
+barnowl.on('raddec', (raddec) => { service.handleEvent('raddec', raddec); });
